@@ -1,0 +1,76 @@
+数据库名称：
+shop
+
+前台用户表名称：
+shop_account
+
+前台用户表shop_ccount字段：
+id  unsigned int 主键 自增
+username char(14) 用户名
+password varchar(32) 密码
+mobile char(11) 手机号
+email varchar(50) 邮箱
+sex  tinyint(1) 性别
+photo varchar(50) 用户头像保存位置
+login_time unsigned int 用户登陆时间
+register_time unsigned int 用户注册时间
+client_ip char(32) 用户登陆的ip地址
+
+
+后台用户表shop_admin字段:
+id unsigned	INT	用户ID（唯一识别号）
+username	VARCHAR(16)	用户名
+password	VARCHAR(32)	密码
+email	VARCHAR(100)	用户邮箱
+create_time	int	创建时间（时间戳）
+logintime	int	最近一次登录时间（时间戳）
+loginip	char(15)	最近登录的IP地址
+status	TINYINT(1)	启用状态：0:表示禁用；1:表示启用
+remark	VARCHAR(255)	备注信息
+
+后台角色权限映射表
+CREATE TABLE IF NOT EXISTS `shop_role_node` (
+  `role_id` smallint(6) unsigned NOT NULL, 
+  `node_id` smallint(6) unsigned NOT NULL,
+  `level` tinyint(1) NOT NULL,
+  `module` varchar(50) DEFAULT NULL,
+  KEY `groupId` (`role_id`),
+  KEY `nodeId` (`node_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+后台权限表
+CREATE TABLE IF NOT EXISTS `shop_node` (
+  `id` smallint(6) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL,
+  `title` varchar(50) DEFAULT NULL,
+  `status` tinyint(1) DEFAULT '0',
+  `remark` varchar(255) DEFAULT NULL,
+  `sort` smallint(6) unsigned DEFAULT NULL,
+  `pid` smallint(6) unsigned NOT NULL,
+  `level` tinyint(1) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `level` (`level`),
+  KEY `pid` (`pid`),
+  KEY `status` (`status`),
+  KEY `name` (`name`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+后台角色表
+CREATE TABLE IF NOT EXISTS `shop_role` (
+  `id` smallint(6) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL,
+  `pid` smallint(6) DEFAULT NULL,
+  `status` tinyint(1) unsigned DEFAULT NULL,
+  `remark` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `pid` (`pid`),
+  KEY `status` (`status`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
+
+后台用户角色映射表
+CREATE TABLE IF NOT EXISTS `shop_role_user` (
+  `role_id` mediumint(9) unsigned DEFAULT NULL,
+  `user_id` char(32) DEFAULT NULL,
+  KEY `group_id` (`role_id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;

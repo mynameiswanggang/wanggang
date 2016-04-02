@@ -1,0 +1,166 @@
+<script>
+	$(function(){
+		//验证用户名
+		$.validator.addMethod('checkUsername',function(value,element){
+			var pattern = /^[\w#*]{4,}$/;
+			return this.optional(element) || (pattern.test(value));
+		},"用户名不合法");
+		//验证密码是否合法(密码由字母数字下划线组成，字母下划线开头，4-50位)
+		$.validator.addMethod('checkPassword',function(value,element){
+			var pattern = /^[a-zA-Z_][\w]{3,49}$/;
+			return this.optional(element) || (pattern.test(value));
+		},"密码不合法");
+		
+		$('#newUser').validate({
+			debug:false,
+			rules:{
+				username:{
+					required:true,
+					checkUsername:true
+				},
+				password:{
+					required:true,
+					checkPassword:true
+				},
+				role:{
+					required:true
+				}
+			},
+			messages:{
+				username:{
+					required:'请输入用户名'
+				},
+				password:{
+					required:'请输入密码'
+				},
+				role:{
+					required:"请选择角色"
+				}
+			},
+	 		errorPlacement:function(error,element){
+		 		   error.appendTo(element.parent());	
+		 		},
+		 		errorClass:'error',
+		 		errorElement:'em',
+		 		submitHandler:function(form){
+		 			var url = "{:U('Admin/user/add_new_user')}";
+		 			$.post(url,$(form).serialize(),function(data){
+		 				//console.log(data); return;
+		 				if(data.res){
+		 					//创建新用户成功，跳转到前台首页
+		 					alert('创建新用户成功');
+		 					location.href = "{:U('Admin/user/user_list')}";
+		 				}else{
+		 					//创建新用户失败，错误信息显示
+		 					alert(data.msg);
+		 				}
+		 			},'json');
+		 		}
+		});		
+	});
+
+
+</script>
+    <!-- Title area -->
+    <div class="titleArea">
+        <div class="wrapper">
+            <div class="pageTitle">
+                <h5>{$pageTitle}</h5>
+                <span>{$pageDesc}</span>
+            </div>
+            <div class="middleNav">
+                <ul>
+                    <li class="mUser"><a href="#" title=""><span class="users"></span></a>
+                        <ul class="mSub1">
+                            <li><a href="#" title="">Add user</a></li>
+                            <li><a href="#" title="">Statistics</a></li>
+                            <li><a href="#" title="">Orders</a></li>
+                        </ul>
+                    </li>
+                    <li class="mMessages"><a href="#" title=""><span class="messages"></span></a>
+                        <ul class="mSub2">
+                            <li><a href="#" title="">New tickets<span class="numberRight">8</span></a></li>
+                            <li><a href="#" title="">Pending tickets<span class="numberRight">12</span></a></li>
+                            <li><a href="#" title="">Closed tickets</a></li>
+                        </ul>
+                    </li>
+                    <li class="mFiles"><a href="#" title="Or you can use a tooltip" class="tipN"><span class="files"></span></a></li>
+                    <li class="mOrders"><a href="#" title=""><span class="orders"></span><span class="numberMiddle">8</span></a>
+                        <ul class="mSub4">
+                            <li><a href="#" title="">Pending uploads</a></li>
+                            <li><a href="#" title="">Statistics</a></li>
+                            <li><a href="#" title="">Trash</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    
+    <div class="line"></div>
+    
+    <!-- Page statistics area -->
+    <div class="statsRow">
+        <div class="wrapper">
+        	<div class="controlB">
+            	<ul>
+                	<li><a href="#" title=""><img src="{$Think.const.ADMIN_IMG_URL}icons/control/32/plus.png" alt="" /><span>Add new session</span></a></li>
+                    <li><a href="#" title=""><img src="{$Think.const.ADMIN_IMG_URL}icons/control/32/database.png" alt="" /><span>New DB entry</span></a></li>
+                    <li><a href="#" title=""><img src="{$Think.const.ADMIN_IMG_URL}icons/control/32/hire-me.png" alt="" /><span>Add new user</span></a></li>
+                    <li><a href="#" title=""><img src="{$Think.const.ADMIN_IMG_URL}icons/control/32/statistics.png" alt="" /><span>Check statistics</span></a></li>
+                    <li><a href="#" title=""><img src="{$Think.const.ADMIN_IMG_URL}icons/control/32/comment.png" alt="" /><span>Review comments</span></a></li>
+                    <li><a href="#" title=""><img src="{$Think.const.ADMIN_IMG_URL}icons/control/32/order-149.png" alt="" /><span>Check orders</span></a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="line"></div>
+    
+    <!-- Main content wrapper -->
+    <div class="wrapper">
+        
+        <!-- Form -->
+        <form id="newUser"  class="form" method="post">
+                <div class="widget">
+                    <div class="title"><img src="{$Think.const.ADMIN_IMG_URL}icons/dark/list.png" alt="" class="titleIcon" /><h6>新用户信息</h6></div>
+                    <div class="formRow">
+                        <label>用户名：</label>
+                        <div class="formRight"><input id="username" name="username" type="text" value="" /></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="formRow">
+                        <label for="labelFor">密码：</label>
+                        <div class="formRight"><input id="password" type="password" name="password" id="labelFor" value="" /></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="formRow">
+                        <label for="labelFor">分配角色：</label>
+                        <div class="formRight">                            
+                        <select name="role" >
+                                <option value="">角色名</option>
+                                <foreach name="roleList" item="role">
+                                <option value="{$key}">{$role}</option>
+                                </foreach>
+                         </select>
+                         </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="formRow">
+                        <div class="formRight">
+                        <a onclick="$('#newUser').submit();" href="javascript:void(0);" title="" class="wButton bluewB ml15 m10"><span>创建</span></a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>                                         
+                </div>                             
+         </form>
+</div>
+
+
+<div class="clear"></div>
+
+</body>
+</html>

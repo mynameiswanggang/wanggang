@@ -1,0 +1,217 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<head>
+	<title><?php echo (L("REGISTER_TITLE")); ?></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href="<?php echo (CSS_URL); ?>bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="<?php echo (CSS_URL); ?>bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+	<link href="<?php echo (CSS_URL); ?>templatemo_style.css" rel="stylesheet" type="text/css">	
+	<script type="text/javascript" src="<?php echo (JS_URL); ?>jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="<?php echo (JS_URL); ?>function.js"></script>		
+	<script type="text/javascript" src="<?php echo (JS_URL); ?>jquery.validate.js"></script>
+	<script type="text/javascript" src="<?php echo (JS_URL); ?>message_cn.js"></script>
+	<style>
+		em.error{
+			color:red;	
+		}
+	</style>
+</head>
+<!-- 表单验证 -->
+<script>
+$(function(){
+	//禁用获取短信验证码按钮
+	$('#create_sms').attr('disabled',true);
+	//验证手机号是否合法
+	$.validator.addMethod('checkMobile',function(value,element){
+		var pattern = /^((13[0-9])|(15[^4,\d])|(18[0,5-9]))\d{8}$/;
+		return this.optional(element) || (pattern.test(value));
+	},"<?php echo L('REGISTER_CHECKMOBILE');?>");
+	//验证密码是否合法(密码由字母数字下划线组成，字母下划线开头，4-50位)
+	$.validator.addMethod('checkPassword',function(value,element){
+		var pattern = /^[a-zA-Z_][\w]{3,49}$/;
+		return this.optional(element) || (pattern.test(value));
+	},"<?php echo L('REGISTER_CHECKPASSWORD');?>");
+	
+	$('#register').validate({
+		debug:false,
+		rules:{
+			//手机号验证
+			mobile:{
+				required:true,
+				checkMobile:true
+			},
+			//短信验证码验证
+			sms:{
+				required:true,
+				digits:true,
+				rangelength:[4,4]
+			},
+			//密码验证
+			password:{
+				required:true,
+				checkPassword:true
+			},
+			//确认密码验证
+			password_confirm:{
+				required:true,
+				equalTo:'input[name=password]'
+			},
+			//邮箱验证
+			email:{
+				required:false,
+				email:true
+			},
+			//协议验证
+			agreement:{
+				required:true
+			}
+		},
+		messages:{
+			//手机号验证错误信息
+			mobile:{
+				required:"<?php echo L('REGISTER_MOBILE_REQUIRED');?>"
+			},
+			//短信验证码错误信息
+			sms:{
+				required:"<?php echo L('REGISTER_SMS_REQUIRED');?>",
+				digits:"<?php echo L('REGISTER_SMS_DIGITS');?>",
+				rangelength:"<?php echo L('REGISTER_SMS_RANGELENGTH');?>"
+			},
+			//密码验证错误信息
+			password:{
+				required:"<?php echo L('REGISTER_PASSWORD_REQUIRED');?>"
+			},
+			//确认密码验证错误信息
+			password_confirm:{
+				required:"<?php echo L('REGISTER_PASSWORD_CONFIRM_REQUIRED');?>",
+				equalTo:"<?php echo L('REGISTER_PASSWORD_CONFIRM_EQUALTO');?>"
+			},
+			//邮箱验证错误信息
+			email:{
+				email:"<?php echo L('REGISTER_EMAIL_EMAIL');?>"	
+			},
+			//协议验证错误信息
+			agreement:{
+				required:"<?php echo L('REGISTER_AGREEMENT_REQUIRED');?>"
+			}
+		},
+ 		errorPlacement:function(error,element){
+		   error.appendTo(element.parent());	
+		},
+		errorClass:'error',
+		errorElement:'em',
+		ignore: '#create_sms',
+		success:function(element,test){
+			if(test.name == 'mobile'){
+				$('#create_sms').attr('disabled',false);
+			}
+		},
+		submitHandler:function(form){
+			var url = "<?php echo U('user/register');?>";
+			$.post(url,$(form).serialize(),function(data){
+				//console.log(data); return;
+				if(data.res){
+					//注册成功,跳转到账号信息显示页面
+					alert(data.msg);
+				}else{
+					//注册失败
+					alert(data.msg);
+				}
+			},'json');
+		}
+	});
+});
+</script>
+<body class="templatemo-bg-image-1">
+	<div class="container">	
+		<div class="col-md-12">			
+			<form class="form-horizontal templatemo-login-form-2" action="#" method="post" id="register">
+			    <div class="row">
+					<div class="col-md-12">
+						<h1 class="margin-bottom-15"><?php echo (L("REGISTER_CREATE_ACCOUNT")); ?></h1>
+					</div>
+				</div>
+				<div class="form-inner">
+			        <div class="form-group">
+			          <div class="col-md-6">		          	
+			            <label for="mobile" class="control-label"><?php echo (L("REGISTER_MOBILE")); ?></label>
+			            <input type="text" class="form-control" name="mobile" placeholder="">
+					  </div>
+					  <div class="col-md-6">
+			            <label for="sms" class="control-label"><?php echo (L("REGISTER_SMS")); ?></label>
+			            <input type="text" name="sms" class="form-control" placeholder="" style="width:120px;">
+				        <input type="button" onclick="get_mobile_code('<?php echo U('user/sms');?>');" class="form-control" id="create_sms" value="<?php echo L('REGISTER_SMS_CHANGE');?>" style="width:120px;padding-left:10px;height:34px;color:blue;float:right;">		            		            		            					  
+					  </div>
+                     </div>
+			        <div class="form-group">
+			          <div class="col-md-6">
+			            <label for="password" class="control-label"><?php echo (L("REGISTER_PASSWORD")); ?></label>
+			            <input type="password" class="form-control" name="password" placeholder="">
+			          </div>
+			          <div class="col-md-6">
+			            <label for="password" class="control-label"><?php echo (L("REGISTER_CONFIRM_PASSWORD")); ?></label>
+			            <input type="password" class="form-control" name="password_confirm" placeholder="">
+			          </div>
+			        </div>
+			        <div class="form-group">
+			          <div class="col-md-12">		          	
+			            <label for="username" class="control-label"><?php echo (L("REGISTER_EMAIL")); ?></label>
+			            <input type="email" class="form-control" name="email" placeholder="">		            		            		            
+			          </div>              
+			        </div>
+			        <div class="form-group">
+			          <div class="col-md-6 templatemo-radio-group">
+			          	<label class="radio-inline">
+		          			<input type="radio" name="sex" value="0" CHECKED> <?php echo (L("REGISTER_MALE")); ?>
+		          		</label>
+		          		<label class="radio-inline">
+		          			<input type="radio" name="sex" value="1"> <?php echo (L("REGISTER_FEMALE")); ?>
+		          		</label>
+			          </div>   
+<!-- 			          <form id="upload" enctype="multipart/form-data" method="post" >
+			          <div class="col-md-6">
+			          <input type="file" class="form-control" name="photo" value="<?php echo L('REGISTER_PHOTO');?>" style="width:120px;padding-left:10px;height:34px;color:blue;"/>
+			          <img src="#" alt="<?php echo L('REGISTER_PORTRAIT');?>" style="width:120px; height:80px;"/>
+			          </div>
+			          </form>   -->        
+			        </div>			        			
+			        <div class="form-group">
+			          <div class="col-md-12">
+			            <label><input type="checkbox" name="agreement" value="1"><?php echo (L("REGISTER_AGREE")); ?> <a href="javascript:;" data-toggle="modal" data-target="#templatemo_modal" style="color:blue;"><?php echo (L("REGISTER_TERMS")); ?></a> <?php echo (L("REGISTER_AND")); ?> <a href="javascript:;" data-toggle="modal" data-target="#templatemo_modal" style="color:blue;"><?php echo (L("REGISTER_PRIVACY")); ?></a></label>
+			          </div>
+			        </div>
+			        <div class="form-group">
+			          <div class="col-md-12">
+			            <input type="submit" value="<?php echo L('REGISTER');?>" class="btn btn-info">
+			            <a href="<?php echo U('user/index');?>" class="pull-right" style="color:blue;"><?php echo (L("REGISTER_LOGIN")); ?></a>
+			          </div>
+			        </div>	
+				</div>				    	
+		      </form>		      
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="templatemo_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Terms of Service</h4>
+	      </div>
+	      <div class="modal-body">
+	      	<p>This form is provided by <a rel="nofollow" href="http://www.cssmoban.com/page/1">Free HTML5 Templates</a> that can be used for your websites. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+	        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+	        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<script type="text/javascript" src="<?php echo (JS_URL); ?>bootstrap.min.js"></script>
+</body>
+</html>
