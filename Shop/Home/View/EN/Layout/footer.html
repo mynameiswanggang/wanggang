@@ -1,0 +1,137 @@
+	<div id="footer">
+		<div class="footer-main">
+			
+			<div class="back-to-top"><a href="#top"><img src="{$Think.const.IMG_URL}top.png" alt="Back to top" border="0"/></a></div>
+			
+			<!-- Footer Column 1 Begin -->
+			<div class="left-column float-left">
+				<h5>{$Think.lang.FOOTER_QUICK_NAV}</h5>
+				<ul class="footer-nav">
+				<!-- 循环遍历出底部连接开始-->
+				<foreach name='footerNAV' item='url'>
+				 <li><a href="{:U($url)}">{:L($key)}</a></li>
+				</foreach>
+				<!-- 循环遍历底部连接结束 -->
+				</ul>
+			</div>
+			<!-- Footer Column 1 End -->
+			
+			<!-- Footer Column 2 Begin -->
+			<div class="middle-column float-left">
+			{$Think.lang.FOOTER_NEWSLETTER}
+<!-- 				<h5>Newsletter</h5>
+				<p>Sign up for our newsletter to receive on a regular basis updates, hot offers, site news etc.</p>
+				<p class="newsletter">
+					<input type="text" value="Enter your e-mail..." onfocus="if(this.value=='Enter your e-mail...'){this.value=''};" onblur="if(this.value==''){this.value='Enter your e-mail...'};" class="newsletter-field"/>
+					<input type="submit" id="go" value="GO" class="go-btn"/>
+				</p> -->
+			</div>
+			<!-- Footer Column 2 End -->
+			
+			<!-- Footer Column 3 Begin -->
+			<div class="left-column float-right">
+				<h5>{$Think.lang.FOOTER_CONTACTS}</h5>
+				<!-- 循环遍历开始 -->
+				<foreach name="contactUs" item="contact">
+					<p>{:L($contact)}</p>
+				</foreach>
+				<!-- 循环遍历结束 -->
+				<p>
+					<a href="#" class="social"><img src="{$Think.const.IMG_URL}facebook.png" alt="facebook" border="0"/></a>
+					<a href="#" class="social"><img src="{$Think.const.IMG_URL}vimeo.png" alt="vimeo" border="0"/></a>
+					<a href="#" class="social"><img src="{$Think.const.IMG_URL}youtube.png" alt="youtube" border="0"/></a>
+					<a href="#" class="social"><img src="{$Think.const.IMG_URL}twitter.png" alt="twitter" border="0"/></a>
+					<a href="#" class="social"><img src="{$Think.const.IMG_URL}google.png" alt="google" border="0"/></a>
+				</p>
+			</div>
+			<!-- Footer Column 3 End -->
+		</div>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+
+	// Megamenu
+	$(function() {
+						
+		var $menu = $('#ldd_menu');
+		
+		$menu.children('li').each(function(){
+			var $this = $(this);
+			var $span = $this.children('span');
+			$span.data('width',$span.width());
+			
+			$this.bind('mouseenter',function(){
+				$menu.find('.ldd_submenu').stop(true,true).hide();
+				$span.stop().animate({'width':'auto'},150,function(){
+					$this.find('.ldd_submenu').slideDown(300);
+				});
+			}).bind('mouseleave',function(){
+				$this.find('.ldd_submenu').stop(true,true).hide();
+				$span.stop().animate({'width':$span.data('width')+'px'},300);
+			});
+		});
+	});
+	
+	$(document).ready(function() {
+		
+		// Border effects
+		$("#main_navi li img").insetBorder({
+			borderColor : '#EDE6E9',
+			inset: 4
+		});
+		
+		// Navigation menu
+		$('ul.sf-menu').superfish({ 
+			delay: 100
+		});  
+		
+		// Slider
+		$(".slider").scrollable({
+			next: '.next2', 
+			prev: '.prev2'
+		});
+	
+		// Fancybox
+		$("a.grouped-elements").fancybox({
+			'titlePosition'	: 'inside'
+		});
+
+		$("a[rel=group4]").fancybox({
+			'transitionIn'		: 'none',
+			'transitionOut'		: 'none',
+			'titlePosition' 	: 'over',
+			'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
+				return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+			}
+		});
+		
+		// Mouseover effect for thumbnails
+		$("a.grouped-elements").hover(function() {
+			  $(this).find(".imagehover").toggleClass("mouseon");
+		});
+		
+	});
+
+	$(window).load(function() {
+		// Main Promo Scroller
+		$("#main").scrollable({
+
+			vertical: true,
+			keyboard: 'static',
+			onSeek: function(event, i) {
+				horizontal.eq(i).data("scrollable").focus();
+			}
+		
+		}).navigator("#main_navi");
+
+		var horizontal = $(".scrollable").scrollable({ circular: true }).navigator(".navi");
+		horizontal.eq(0).data("scrollable").focus();
+	});
+	
+</script>
+
+
+</body>
+</html>

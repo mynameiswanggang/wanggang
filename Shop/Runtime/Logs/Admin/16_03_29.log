@@ -1,0 +1,1574 @@
+[ 2016-03-29T22:02:52+08:00 ] 127.0.0.1 /admin/admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.086005s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.086005s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.319019s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.319019s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.054003s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.054003s ]
+
+[ 2016-03-29T22:02:56+08:00 ] 127.0.0.1 /index.php/Admin/Public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.029002s ]
+INFO: [ app_end ] --END-- [ RunTime:0.029002s ]
+
+[ 2016-03-29T22:03:06+08:00 ] 127.0.0.1 /index.php/Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0618s ]
+SQL: SELECT * FROM `shop_user` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0156s ]
+NOTIC: [8] Undefined index: validate D:\phpfind\WWW\thinkphp\Think\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\phpfind\WWW\thinkphp\Think\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `shop_user` SET `login_count`='5',`login_time`='1459260186',`login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: uid D:\phpfind\WWW\thinkphp\Think\Library\Org\Util\Rbac.class.php 第 85 行.
+NOTIC: [8] Undefined index: superadmin D:\phpfind\WWW\thinkphp\Think\Library\Org\Util\Rbac.class.php 第 88 行.
+SQL: select node.id,node.name from shop_role as role,shop_role_user as user,shop_role_node as access ,shop_node as node where user.user_id='' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=1 and node.status=1 [ RunTime:0.0936s ]
+
+[ 2016-03-29T22:03:06+08:00 ] 127.0.0.1 /index.php/Admin/Admin/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: title D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\52b83017704e7cf3f14fdee5125960d1.php 第 6 行.
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\52b83017704e7cf3f14fdee5125960d1.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.058003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-29T22:03:13+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0140s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.046002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010000s ]
+
+[ 2016-03-29T22:13:54+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0280s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0150s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,15   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.026002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-03-29T22:14:41+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0140s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,15   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.024001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-03-29T22:15:40+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0140s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,15   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.026001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-29T22:17:16+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0140s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,15   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.026001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-03-29T22:18:18+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0150s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,15   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.119007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-29T22:19:20+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0130s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,15   [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.023002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-29T22:20:17+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0130s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,15   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-29T22:20:21+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=1&iColumns=9&sColumns=&iDisplayStart=0&iDisplayLength=10&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&mDataProp_8=8&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&sSearch_8=&bRegex_8=false&bSearchable_8=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&bSortable_8=true&_=1459261221489
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0160s ]
+
+[ 2016-03-29T22:20:33+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=2&iColumns=9&sColumns=&iDisplayStart=0&iDisplayLength=25&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&mDataProp_8=8&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&sSearch_8=&bRegex_8=false&bSearchable_8=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&bSortable_8=true&_=1459261233836
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0130s ]
+
+[ 2016-03-29T22:44:03+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.033002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-03-29T22:44:07+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=1&iColumns=9&sColumns=&iDisplayStart=0&iDisplayLength=10&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&mDataProp_8=8&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&sSearch_8=&bRegex_8=false&bSearchable_8=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&bSortable_8=true&_=1459262647537
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0240s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0110s ]
+
+[ 2016-03-29T22:44:28+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.023001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-03-29T22:44:32+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=1&iColumns=9&sColumns=&iDisplayStart=0&iDisplayLength=10&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&mDataProp_8=8&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&sSearch_8=&bRegex_8=false&bSearchable_8=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&bSortable_8=true&_=1459262672427
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0160s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,10   [ RunTime:0.0050s ]
+
+[ 2016-03-29T22:45:02+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=2&iColumns=9&sColumns=&iDisplayStart=0&iDisplayLength=25&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&mDataProp_8=8&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&sSearch_8=&bRegex_8=false&bSearchable_8=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&bSortable_8=true&_=1459262701999
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0130s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,25   [ RunTime:0.0030s ]
+
+[ 2016-03-29T22:46:29+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.026001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-03-29T22:46:31+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=1&iColumns=9&sColumns=&iDisplayStart=0&iDisplayLength=10&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&mDataProp_8=8&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&sSearch_8=&bRegex_8=false&bSearchable_8=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&bSortable_8=true&_=1459262790895
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0120s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,10   [ RunTime:0.0040s ]
+
+[ 2016-03-29T22:46:34+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=2&iColumns=9&sColumns=&iDisplayStart=0&iDisplayLength=25&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&mDataProp_8=8&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&sSearch_8=&bRegex_8=false&bSearchable_8=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&bSortable_8=true&_=1459262794050
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0156s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,25   [ RunTime:0.0000s ]
+
+[ 2016-03-29T22:46:35+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=3&iColumns=9&sColumns=&iDisplayStart=0&iDisplayLength=10&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&mDataProp_8=8&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&sSearch_8=&bRegex_8=false&bSearchable_8=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&bSortable_8=true&_=1459262795630
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0150s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,10   [ RunTime:0.0030s ]
+
+[ 2016-03-29T22:47:10+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.031002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-29T22:47:24+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.025001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-29T22:47:56+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-03-29T22:47:57+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=1&iColumns=9&sColumns=&iDisplayStart=0&iDisplayLength=10&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&mDataProp_8=8&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&sSearch_8=&bRegex_8=false&bSearchable_8=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&bSortable_8=true&_=1459262877795
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0120s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,10   [ RunTime:0.0030s ]
+
+[ 2016-03-29T22:48:01+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.025001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-29T22:48:03+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=1&iColumns=9&sColumns=&iDisplayStart=0&iDisplayLength=10&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&mDataProp_8=8&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&sSearch_8=&bRegex_8=false&bSearchable_8=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&bSortable_8=true&_=1459262883107
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0160s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,10   [ RunTime:0.0030s ]
+
+[ 2016-03-29T22:48:14+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=2&iColumns=9&sColumns=&iDisplayStart=0&iDisplayLength=10&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&mDataProp_8=8&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&sSearch_8=&bRegex_8=false&bSearchable_8=true&iSortingCols=1&iSortCol_0=4&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&bSortable_8=true&_=1459262894165
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0130s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,10   [ RunTime:0.0020s ]
+
+[ 2016-03-29T22:48:15+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=3&iColumns=9&sColumns=&iDisplayStart=0&iDisplayLength=10&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&mDataProp_8=8&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&sSearch_8=&bRegex_8=false&bSearchable_8=true&iSortingCols=1&iSortCol_0=4&sSortDir_0=desc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&bSortable_8=true&_=1459262895550
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0140s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,10   [ RunTime:0.0020s ]
+
+[ 2016-03-29T22:48:30+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=4&iColumns=9&sColumns=&iDisplayStart=0&iDisplayLength=25&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&mDataProp_8=8&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&sSearch_8=&bRegex_8=false&bSearchable_8=true&iSortingCols=1&iSortCol_0=4&sSortDir_0=desc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&bSortable_8=true&_=1459262910757
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0140s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,25   [ RunTime:0.0030s ]
+
+[ 2016-03-29T22:49:27+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0160s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.023001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-29T22:49:28+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=1&iColumns=9&sColumns=&iDisplayStart=0&iDisplayLength=10&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&mDataProp_8=8&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&sSearch_8=&bRegex_8=false&bSearchable_8=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&bSortable_8=true&_=1459262967969
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0160s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,10   [ RunTime:0.0040s ]
+
+[ 2016-03-29T22:50:48+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0400s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.028001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-03-29T22:50:49+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=1&iColumns=8&sColumns=&iDisplayStart=0&iDisplayLength=10&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&_=1459263049154
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0150s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,10   [ RunTime:0.0790s ]
+
+[ 2016-03-29T22:51:02+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=2&iColumns=8&sColumns=&iDisplayStart=0&iDisplayLength=25&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&_=1459263062570
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0130s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,25   [ RunTime:0.0040s ]
+
+[ 2016-03-29T22:53:41+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.035002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-03-29T22:53:45+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=1&iColumns=8&sColumns=&iDisplayStart=0&iDisplayLength=10&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&_=1459263225089
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0190s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,10   [ RunTime:0.0060s ]
+
+[ 2016-03-29T22:53:54+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0150s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.026002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-29T22:53:55+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=1&iColumns=8&sColumns=&iDisplayStart=0&iDisplayLength=10&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&_=1459263235081
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0150s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,10   [ RunTime:0.0030s ]
+
+[ 2016-03-29T22:54:00+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=2&iColumns=8&sColumns=&iDisplayStart=0&iDisplayLength=25&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&_=1459263240700
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0140s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,25   [ RunTime:0.0030s ]
+
+[ 2016-03-29T22:54:22+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.034002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-29T22:54:23+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=1&iColumns=9&sColumns=&iDisplayStart=0&iDisplayLength=10&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&mDataProp_8=8&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&sSearch_8=&bRegex_8=false&bSearchable_8=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&bSortable_8=true&_=1459263263757
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0140s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,10   [ RunTime:0.0040s ]
+
+[ 2016-03-29T22:54:27+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.023001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-29T22:54:28+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=1&iColumns=9&sColumns=&iDisplayStart=0&iDisplayLength=10&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&mDataProp_8=8&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&sSearch_8=&bRegex_8=false&bSearchable_8=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&bSortable_8=true&_=1459263268621
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0140s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,10   [ RunTime:0.0030s ]
+
+[ 2016-03-29T22:55:39+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=2&iColumns=9&sColumns=&iDisplayStart=0&iDisplayLength=25&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&mDataProp_8=8&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&sSearch_8=&bRegex_8=false&bSearchable_8=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&bSortable_8=true&_=1459263339268
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0140s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,25   [ RunTime:0.0040s ]
+
+[ 2016-03-29T22:57:14+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0150s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.026002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004001s ]
+
+[ 2016-03-29T22:57:17+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=1&iColumns=9&sColumns=&iDisplayStart=0&iDisplayLength=10&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&mDataProp_8=8&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&sSearch_8=&bRegex_8=false&bSearchable_8=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&bSortable_8=true&_=1459263437382
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0160s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,10   [ RunTime:0.0050s ]
+
+[ 2016-03-29T22:57:27+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=2&iColumns=9&sColumns=&iDisplayStart=0&iDisplayLength=25&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&mDataProp_8=8&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&sSearch_8=&bRegex_8=false&bSearchable_8=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&bSortable_8=true&_=1459263447634
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0156s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,25   [ RunTime:0.0166s ]
+
+[ 2016-03-29T23:01:58+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.044002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-29T23:02:02+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=1&iColumns=9&sColumns=&iDisplayStart=0&iDisplayLength=10&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&mDataProp_8=8&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&sSearch_8=&bRegex_8=false&bSearchable_8=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&bSortable_8=true&_=1459263721879
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0100s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,10   [ RunTime:0.0040s ]
+
+[ 2016-03-29T23:04:25+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0160s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.026002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-29T23:04:29+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=1&iColumns=9&sColumns=&iDisplayStart=0&iDisplayLength=10&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&mDataProp_5=5&mDataProp_6=6&mDataProp_7=7&mDataProp_8=8&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&sSearch_8=&bRegex_8=false&bSearchable_8=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&bSortable_8=true&_=1459263869244
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0280s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,10   [ RunTime:0.0040s ]
+
+[ 2016-03-29T23:12:57+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.014001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-29T23:14:10+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0160s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-29T23:14:33+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.024001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-29T23:14:55+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.021001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-29T23:15:02+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=1&iColumns=1&sColumns=&iDisplayStart=0&iDisplayLength=10&mDataProp_0=0&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&_=1459264501927
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0130s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,10   [ RunTime:0.0020s ]
+
+[ 2016-03-29T23:16:11+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-29T23:16:14+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=1&iColumns=1&sColumns=&iDisplayStart=0&iDisplayLength=10&mDataProp_0=0&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&_=1459264574722
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0290s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,10   [ RunTime:0.0040s ]
+
+[ 2016-03-29T23:16:20+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=2&iColumns=1&sColumns=&iDisplayStart=0&iDisplayLength=25&mDataProp_0=0&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&_=1459264580641
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0130s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,25   [ RunTime:0.0030s ]
+
+[ 2016-03-29T23:16:45+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: role D:\phpfind\WWW\thinkphp\Shop\Runtime\Cache\Admin\9b0d757787a79c84f11a78be97e68529.php 第 99 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-29T23:16:49+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=1&iColumns=1&sColumns=&iDisplayStart=0&iDisplayLength=10&mDataProp_0=0&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&_=1459264609035
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0150s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,10   [ RunTime:0.0250s ]
+
+[ 2016-03-29T23:16:55+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=2&iColumns=1&sColumns=&iDisplayStart=0&iDisplayLength=25&mDataProp_0=0&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&_=1459264615195
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0130s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,25   [ RunTime:0.0030s ]
+
+[ 2016-03-29T23:16:58+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=3&iColumns=1&sColumns=&iDisplayStart=0&iDisplayLength=50&mDataProp_0=0&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&_=1459264618763
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0130s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,50   [ RunTime:0.0030s ]
+
+[ 2016-03-29T23:17:00+08:00 ] 127.0.0.1 /index.php/Admin/user/user_list.html?sEcho=4&iColumns=1&sColumns=&iDisplayStart=0&iDisplayLength=10&mDataProp_0=0&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&_=1459264620567
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given D:\phpfind\WWW\thinkphp\Shop\Common\Controller\AuthController.class.php 第 43 行.
+SQL: SHOW COLUMNS FROM `shop_role` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0160s ]
+SQL: SELECT shop_user.id,shop_user.username,shop_role.name AS `role`,shop_user.email,from_unixtime(shop_user.create_time,"%Y-%m-%d") as create_time,from_unixtime(shop_user.login_time,"%Y-%m-%d") as login_time,shop_user.login_ip,shop_user.status,shop_user.login_count FROM `shop_user` LEFT JOIN shop_role_user ON shop_user.id = shop_role_user.user_id LEFT JOIN shop_role ON shop_role_user.role_id = shop_role.id  ORDER BY `login_time` desc LIMIT 0,10   [ RunTime:0.0020s ]
+

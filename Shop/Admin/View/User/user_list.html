@@ -1,0 +1,149 @@
+
+<!-- Title area -->
+<div class="titleArea">
+	<div class="wrapper">
+		<div class="pageTitle">
+			<h5>{$pageTitle}</h5>
+			<span>{$pageDesc}</span>
+		</div>
+		<div class="middleNav">
+			<ul>
+				<li class="mUser"><a href="#" title=""><span class="users"></span></a>
+					<ul class="mSub1">
+						<li><a href="#" title="">Add user</a></li>
+						<li><a href="#" title="">Statistics</a></li>
+						<li><a href="#" title="">Orders</a></li>
+					</ul></li>
+				<li class="mMessages"><a href="#" title=""><span
+						class="messages"></span></a>
+					<ul class="mSub2">
+						<li><a href="#" title="">New tickets<span
+								class="numberRight">8</span></a></li>
+						<li><a href="#" title="">Pending tickets<span
+								class="numberRight">12</span></a></li>
+						<li><a href="#" title="">Closed tickets</a></li>
+					</ul></li>
+				<li class="mFiles"><a href="#" title="Or you can use a tooltip"
+					class="tipN"><span class="files"></span></a></li>
+				<li class="mOrders"><a href="#" title=""><span
+						class="orders"></span><span class="numberMiddle">8</span></a>
+					<ul class="mSub4">
+						<li><a href="#" title="">Pending uploads</a></li>
+						<li><a href="#" title="">Statistics</a></li>
+						<li><a href="#" title="">Trash</a></li>
+					</ul></li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+
+<div class="line"></div>
+
+<!-- Page statistics area -->
+<div class="statsRow">
+	<div class="wrapper">
+		<div class="controlB">
+			<ul>
+				<li><a href="#" title=""><img
+						src="{$Think.const.ADMIN_IMG_URL}icons/control/32/plus.png" alt="" /><span>Add
+							new session</span></a></li>
+				<li><a href="#" title=""><img
+						src="{$Think.const.ADMIN_IMG_URL}icons/control/32/database.png"
+						alt="" /><span>New DB entry</span></a></li>
+				<li><a href="#" title=""><img
+						src="{$Think.const.ADMIN_IMG_URL}icons/control/32/hire-me.png"
+						alt="" /><span>Add new user</span></a></li>
+				<li><a href="#" title=""><img
+						src="{$Think.const.ADMIN_IMG_URL}icons/control/32/statistics.png"
+						alt="" /><span>Check statistics</span></a></li>
+				<li><a href="#" title=""><img
+						src="{$Think.const.ADMIN_IMG_URL}icons/control/32/comment.png"
+						alt="" /><span>Review comments</span></a></li>
+				<li><a href="#" title=""><img
+						src="{$Think.const.ADMIN_IMG_URL}icons/control/32/order-149.png"
+						alt="" /><span>Check orders</span></a></li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+
+<div class="line"></div>
+
+<!-- Main content wrapper -->
+<div id="userInfoList" class="wrapper">
+
+	<!-- Dynamic table -->
+	<div class="widget">
+		<div class="title">
+			<img src="{$Think.const.ADMIN_IMG_URL}icons/dark/full2.png" alt=""
+				class="titleIcon" />
+			<h6>管理员列表</h6>
+		</div>
+		<table cellpadding="0" cellspacing="0" border="0"
+			class="display dTable">
+			<thead>
+				<tr>
+					<th v-for="title in tableTitle">{{title}}</th>
+				</tr>
+			</thead>
+			<tbody>
+		 		<tr v-for="user in userList">
+					<td>{{user.username}}</td>
+					<td>{{user.role}}</td>
+					<td>{{user.email}}</td>
+					<td>{{user.create_time}}</td>
+					<td>{{user.login_time}}</td>
+					<td>{{user.login_ip}}</td>
+					<td>{{user.status}}</td>
+					<td>{{user.login_count}}</td>
+					<td><a v-bind:href="#">修改</a> | <a v-bind:href="#">删除</a></td>
+				</tr> 
+			</tbody>
+		</table>
+	</div>
+
+</div>
+
+<!-- Footer line -->
+<div id="footer">
+	<div class="wrapper">
+		As usually all rights reserved.More Templates <a
+			href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a>
+		- Collect from <a href="http://www.cssmoban.com/" title="网页模板"
+			target="_blank">网页模板</a>
+	</div>
+</div>
+
+</div>
+
+<div class="clear"></div>
+<script>
+  		//$(function(){
+  			var userTable = $('.dTable').dataTable({
+  				"bJQueryUI": true,
+  				"sPaginationType": "full_numbers",
+  		        "bProcessing": true,
+  		        "bServerSide": true,
+  		        "sAjaxSource": "{:U('Admin/user/user_list')}" 				
+  			});
+  			console.log(userTable.data());
+  			var users = userTable.data();
+  		//});
+  //$(function(){ 
+		var userInfoList = new Vue({
+	 		el:"#userInfoList",
+	 		data:{
+	 			tableTitle:{$tableTitle | json_encode},
+	 			userList:users
+	 		}	 		
+	 	});
+		//console.log(userInfoList.userList);
+  //});	
+
+  
+  </script>
+</body>
+</html>

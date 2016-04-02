@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>{$siteTitle}</title>
+
+<!-- Main style -->
+<link rel="stylesheet" href="{$Think.const.CSS_URL}main.css" type="text/css" />
+
+<!-- Fancybox style -->
+<link rel="stylesheet" href="{$Think.const.FANCYBOX_URL}fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+
+<!-- Product slider style -->
+<link rel="stylesheet" href="{$Think.const.CSS_URL}product-slider.css" type="text/css" />
+
+<!-- Style for the superfish navigation menu -->
+<link rel="stylesheet" href="{$Think.const.SUPERFISH_URL}superfish.css" type="text/css" media="screen" />
+
+<!-- Promo slider style -->
+<link rel="stylesheet" href="{$Think.const.CSS_URL}megamenu.css" type="text/css" /> 
+
+<!-- Style for Megamenu -->
+<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}scrollable-navig.css">
+
+
+<!-- JS for jQuery -->
+<script type="text/javascript" src="{$Think.const.JS_URL}jquery-1.11.1.min.js"></script>
+
+<!-- JS for jQuery Product slider -->
+<script type="text/javascript" src="{$Think.const.JS_URL}jquery.tools.min.js"></script>
+
+<!-- JS for jQuery Border effect -->
+<script type="text/javascript" src="{$Think.const.JS_URL}jquery.insetBorderEffect.js"></script>
+
+<!-- JS for jQuery Fancy Box -->
+<script type="text/javascript" src="{$Think.const.FANCYBOX_URL}fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+
+<!-- JS for superfish navigation menu -->
+<script type="text/javascript" src="{$Think.const.SUPERFISH_URL}hoverIntent.js"></script> 
+<script type="text/javascript" src="{$Think.const.SUPERFISH_URL}superfish.js"></script> 
+
+</head>
+<body>
+	
+<div id="container">
+
+	<div id="header-top">
+		<p>
+			 {$siteWelcome} <a style="float:right;color:#e2a4c1;text-decoration:underline; margin-right:10px;" href="javascript:$.get('__CONTROLLER__/switchLang',{},function(res){if(res)location.reload();},'json');">{$lang}</a>
+		</p>
+	</div>
+	
+	<div class="header-main">
+		<div class="logo">
+			<a href="index.html" name="top"><img src="{$Think.const.IMG_URL}logo.png" alt="logo" border="0"/></a>
+		</div>
+		
+		<div class="login-block">
+			<span class="account"><a href="{$signInOutUrl}" class="account">{$signInOut}</a></span> <span class="cart"><a href="cart.html" class="cart">{$mycart}</a></span>
+		</div>
+	</div>
+	
+	<div id="navigation">
+		
+		<div class="search-container">
+			<div class="search-inner">	
+				<input type="text" value="{$search}" onfocus="if(this.value=='{$search}'){this.value=''};" onblur="if(this.value==''){this.value='{$search}'};" class="search-field"/>
+				<input type="submit" id="s_submit" value="" class="search-btn"/>
+			</div>
+		</div>
+		<div class="navigation-inner">
+			<div class="flare"></div>
+			<div class="home-icon">
+				<a href="index.html"><img src="{$Think.const.IMG_URL}home_icon.png" border="0"/></a>
+			</div>
+			<!-- Navigation start -->
+			<ul class="sf-menu">
+			<!-- 循环出顶部菜单 开始-->
+			<foreach name="topMenu" item="sub">
+				<li class="nav-item"><a href="#">{:L($key)}</a>
+					<neq name="sub|empty" value="false">
+						<ul>
+							<foreach name="sub" item="url">
+								<li class="sfish-navgiation-item">
+								<a href="{:U($url)}">{:L($key)}</a>
+								</li>
+							</foreach>
+						</ul>					
+					</neq>
+				</li>
+			</foreach>
+			<!-- 循环顶部菜单结束 -->
+<!-- 				<li class="nav-item"><a href="#">Pages</a>
+					<ul>
+						<li class="sfish-navgiation-item">
+							<a href="price_compare.html">Price Compare Table</a>
+						</li>
+						<li class="sfish-navgiation-item">
+							<a href="faq.html">FAQ</a>
+						</li>
+						<li class="sfish-navgiation-item">
+							<a href="cart.html">Shopping Cart</a>
+						</li>
+						<li class="sfish-navgiation-item">
+							<a href="right_sidebar.html">Right Sidebar</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-item"><a href="grid.html">Online Store</a>
+					<ul>
+						<li class="sfish-navgiation-item">
+							<a href="grid.html">Product Listing as Grid</a>
+						</li>
+						<li class="sfish-navgiation-item">
+							<a href="list.html">Product Listing as List</a>
+						</li>
+						<li class="sfish-navgiation-item last">
+							<a href="details.html">Product Details</a>
+						</li>
+					</ul>	
+				</li>
+				<li class="nav-item"><a href="blog.html">Blog</a></li>
+				<li class="nav-item"><a href="#">Shortcodes</a>
+					<ul>
+						<li class="sfish-navgiation-item">
+							<a href="shortcodes_buttons.html">Buttons and Links</a>
+						</li>
+						<li class="sfish-navgiation-item">
+							<a href="shortcodes_columns.html">Columns</a>
+						</li>
+						<li class="sfish-navgiation-item last">
+							<a href="shortcodes_tabs.html">Tabs and Accordions</a>
+						</li>
+					</ul>	
+				</li>
+				<li class="nav-item"><a href="#">Portfolio</a>
+					<ul>
+						<li class="sfish-navgiation-item">
+							<a href="portfolio_2columns.html">Two Columns Layout</a>
+						</li>
+						<li class="sfish-navgiation-item">
+							<a href="portfolio_3columns.html">Three Columns Layout</a>
+						</li>
+						<li class="sfish-navgiation-item last">
+							<a href="portfolio_4columns.html">Four Columns Layout</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-item"><a href="contacts.html">Contacts</a></li> -->
+			</ul>
+			<!-- Navigation end -->
+<!-- 			
+			Megamenu Begin
+			<ul id="ldd_menu" class="ldd_menu">
+				<li>
+					<span>Mega Menu</span>Increases to 510px in width
+					<div class="ldd_submenu">
+						<div class="mega-menu-text float-left">
+							<h4>What is Mega Menu?</h4>
+							Mega menu is a next step of the js based dropdown. It's similar to a normal menu in terms of general behaviour, but enriched with more options, multiple links, complex navigation, form elements like login, search and much more.
+						</div>
+						<div class="mega-menu-text float-right">
+							<h4>Example</h4>
+							<p class="newsletter">
+								<input type="text" class="megamenu-field" onblur="if(this.value==''){this.value='Enter your e-mail...'};" onfocus="if(this.value=='Enter your e-mail...'){this.value=''};" value="Enter your e-mail...">
+							</p>
+							<p class="newsletter">
+								<input type="text" class="megamenu-field" onblur="if(this.value==''){this.value='Enter your name...'};" onfocus="if(this.value=='Enter your name...'){this.value=''};" value="Enter your name...">
+							</p>
+						</div><br class="clear"/>
+						<div class="mega-menu-text float-left">
+							<h4>Why do I need it?</h4>
+							Because you can create much more interesting and complex navigation systems, grouping links, improve the UI, improve the user's workflow while filling forms, signing in etc.
+						</div>
+						<div class="mega-menu-text float-right">
+							<h4>Another example</h4>
+							<img src="{$Think.const.IMG_URL}slide_small1.jpg">
+							<img src="{$Think.const.IMG_URL}slide_small3.jpg">
+							<img src="{$Think.const.IMG_URL}slide_small2.jpg">
+						</div>
+					</div>
+				</li>
+			</ul>
+			Megamenu End -->
+			
+		</div>
+	</div>

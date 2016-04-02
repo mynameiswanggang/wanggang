@@ -1,0 +1,24 @@
+[ 2016-02-24T01:50:48+08:00 ] 127.0.0.1 /admin/user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载模块:Admin
+
+[ 2016-02-24T01:50:57+08:00 ] 127.0.0.1 /Admin/user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+ERR: 无法加载模块:Admin
+
+[ 2016-02-24T01:52:12+08:00 ] 127.0.0.1 /Admin/User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002500s ]
+ERR: 无法加载模块:Admin
+
+[ 2016-02-24T01:52:20+08:00 ] 127.0.0.1 /Admin/User/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002500s ]
+ERR: 无法加载模块:Admin
+
