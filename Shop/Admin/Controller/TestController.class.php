@@ -16,4 +16,8 @@ class TestController extends Controller{
     public function getip(){
         var_dump(get_client_ip());
     }
+    
+    public function test_git(){
+        echo 'haha';
+    }
 }
